@@ -1,7 +1,13 @@
-namespace AspNetCoreTodo.Models
-{
+namespace AspNetCoreTodo.Models;
 public class TodoViewModel
 {
-public TodoItem[] Items { get; set; }
-}
+    public TodoViewModel() : this(Array.Empty<TodoItem>())
+    {
+
+    }
+    public TodoViewModel(TodoItem[] items)
+    {
+        Items = items;
+    }
+    public TodoItem[] Items { get; set; }
 }
