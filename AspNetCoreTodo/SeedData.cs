@@ -38,7 +38,8 @@ namespace AspNetCoreTodo
             testAdmin = new IdentityUser
             {
                 UserName = "admin@todo.local",
-                Email = "admin@todo.local"
+                Email = "admin@todo.local",
+                EmailConfirmed = true
             };
             await userManager.CreateAsync(testAdmin, "NotSecure123!!");
             await userManager.AddToRoleAsync(testAdmin, Constants.AdministratorRole);
